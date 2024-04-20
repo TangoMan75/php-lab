@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  # https://hub.docker.com/_/php
+  php:
+    build:
+      context: ./docker/php/
+      dockerfile: php8.2-fpm-alpine-dev.Dockerfile
+    volumes:
+      - ./:/var/www:rw,delegated
+      - ./docker/php/conf.d/custom.ini:/usr/local/etc/php/conf.d/custom.ini:ro
+      - ~/.ssh:/root/.ssh:ro
+    restart: unless-stopped
+    tty: true

@@ -1,0 +1,30 @@
+{
+  "name": "tangoman/simple-jwt",
+  "description": "SimpleJWT",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Morin Matthias",
+      "email": "mat@tangoman.io",
+      "homepage": "https://tangoman.io",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=8.2"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10",
+    "friendsofphp/php-cs-fixer": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "TangoMan\\SimpleJWT\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TangoMan\\SimpleJWT\\Tests\\": "tests/"
+    }
+  }
+}
